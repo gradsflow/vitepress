@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Gradsflow",
-  description: "Blogs and articles on Machine Learning and AI",
+  description: "Unleash the Power of AI in Your Products. Build GenAI models with Gradsflow.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -25,6 +25,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/gradsflow/gradsflow' }
     ]
   },
+  head: [['link', { rel: 'icon', href: '/assets/favicon.ico' }]],
   sitemap: {
     hostname: 'https://gradsflow.com'
   }
