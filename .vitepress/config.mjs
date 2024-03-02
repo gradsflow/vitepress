@@ -25,7 +25,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/gradsflow/gradsflow' }
     ]
   },
-  head: [['link', { rel: 'icon', href: '/assets/favicon.ico' }]],
+  head: [['link', { rel: 'icon', href: 'https://ik.imagekit.io/gradsflow/logo/v2/gf-logo-gflow-white_vCxfpINvg.svg' }]],
   sitemap: {
     hostname: 'https://gradsflow.com'
   }
