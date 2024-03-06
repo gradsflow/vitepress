@@ -5,15 +5,15 @@ layout: home
 hero:
   name: "Gradsflow"
   text: "Unleash the Power of AI in Your Products"
-  tagline: "Democratizing AI with AutoML for Everyone"
+  tagline: "Helping developers build AI powered products with low-code APIs 🚀"
   actions:
     - theme: brand
       text: Contact us
-      link: https://twitter.com/gradsflow
+      link: https://calendly.com/gradsflow/30min
       # text: Markdown Examples
       # link: /markdown-examples
     - theme: alt
-      text: Serve GenAI Models
+      text: Deploy AI Models
       link: http://fastserve.aniketmaurya.com/
       # link: /api-examples
 
