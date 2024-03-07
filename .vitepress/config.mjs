@@ -29,5 +29,10 @@ export default defineConfig({
   head: [['link', { rel: 'icon', href: 'https://ik.imagekit.io/gradsflow/logo/v2/gf-logo-gflow-white_vCxfpINvg.svg' }]],
   sitemap: {
     hostname: 'https://gradsflow.com'
-  }
+  },
+
+  ignoreDeadLinks: [
+    // ignore all localhost links
+    /^https?:\/\/localhost/,
+  ]
 })
