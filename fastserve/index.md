@@ -102,6 +102,45 @@ app.run_server()
 or, run `python -m fastserve.models --model image-classification --model_name resnet18 --batch_size 4 --timeout 1` from
 terminal.
 
+### Serve HuggingFace Models
+
+You can easily serve any HuggingFace Transformer model using FastServe.
+
+For some models, it is required to have a HuggingFace API token correctly set up in your environment to access models from the HuggingFace Hub.
+This is not necessary for all models, but you may encounter this requirement, such as accepting terms of use or any other necessary steps. Take a look at your model's page for specific requirements.
+```
+export HUGGINGFACE_TOKEN=<your hf token>
+```
+
+Example of run the server:
+```python
+from fastserve.models import ServeHuggingFace
+
+# Here, we use "gpt2" as an example. Replace "gpt2" with the name of your desired model.
+# The `model_name` parameter is optional; the class can retrieve it from an environment variable called `HUGGINGFACE_MODEL_NAME`.
+app = ServeHuggingFace(model_name="gpt2")
+app.run_server()
+```
+
+or, run `python -m fastserve.models --model huggingface --model_name bigcode/starcoder --batch_size 4 --timeout 1` from
+terminal.
+
+To make a request to the server, send a JSON payload with the prompt you want the model to generate text for. Here's an example using requests in Python:
+```python
+import requests
+
+response = requests.post(
+    "http://localhost:8000/endpoint",
+    json={"prompt": "Once upon a time", "temperature": 0.7, "max_tokens": 100}
+)
+print(response.json())
+```
+This setup allows you to easily deploy and interact with any Transformer model from HuggingFace's model hub, providing a convenient way to integrate AI capabilities into your applications.
+
+
+Remember, for deploying specific models, ensure that you have the necessary dependencies installed and the model files accessible if they are not directly available from HuggingFace's model hub.
+
+
 ### Serve Custom Model
 
 To serve a custom model, you will have to implement `handle` method for `FastServe` that processes a batch of inputs and
@@ -138,6 +177,33 @@ python fastserve.deploy.lightning --filename main.py \
     --teamspace LIGHTNING_TEAMSPACE \
     --machine "CPU"  # T4, A10G or A10G_X_4
 ```
+
+## Containerization
+
+To containerize your FastServe application, a Docker example is provided in the `examples/docker-compose-example` directory. The example is about face recognition and includes a `Dockerfile` for creating a Docker image and a `docker-compose.yml` for easy deployment. Here's a quick overview:
+
+- **Dockerfile**: Defines the environment, installs dependencies from `requirements.txt`, and specifies the command to run your FastServe application.
+- **docker-compose.yml**: Simplifies the deployment of your FastServe application by defining services, networks, and volumes.
+
+To use the example, navigate to the `examples/docker-compose-example` directory and run:
+
+```shell
+docker-compose up --build
+```
+
+This will build the Docker image and start your FastServe application in a container, making it accessible on the specified port.
+
+> **Note:** We provide an example using face recognition. If you need to use other models, you will likely need to change the requirements.txt or the Dockerfile. Don't worry; this example is intended to serve as a quick start. Feel free to modify it as needed.
+
+## Passing Arguments to Uvicorn in `run_server()`
+FastServe leverages Uvicorn, a lightning-fast ASGI server, to serve machine learning models, making FastServe highly efficient and scalable.
+The `run_server()` method supports passing additional arguments to uvicorn by utilizing `*args` and `**kwargs`. This feature allows you to customize the server's behavior without modifying the source code. For example:
+
+```shell
+app.run_server(host='0.0.0.0', port=8000, log_level='info')
+```
+
+In this example, host, port, and log_level are passed directly to uvicorn.run() to specify the server's IP address, port, and logging level. You can pass any argument supported by `uvicorn.run()` to `run_server()` in this manner.
 
 ## Contribute
 
