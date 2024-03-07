@@ -10,12 +10,10 @@ hero:
     - theme: brand
       text: Contact us
       link: https://calendly.com/gradsflow/30min
-      # text: Markdown Examples
-      # link: /markdown-examples
     - theme: alt
       text: Deploy AI Models
-      link: http://fastserve.aniketmaurya.com/
-      # link: /api-examples
+      # link: http://fastserve.aniketmaurya.com/
+      link: /fastserve/
 
 features:
   - title: Easy to Use
