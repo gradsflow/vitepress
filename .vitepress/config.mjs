@@ -6,6 +6,8 @@ export default defineConfig({
   description: "Unleash the Power of AI in Your Products. Build GenAI models with Gradsflow.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: 'https://ik.imagekit.io/gradsflow/logo/v2/4_pP1S1LsQq.png',
+    head: [['link', { rel: 'icon', href: 'https://ik.imagekit.io/gradsflow/logo/v2/gf-logo-gflow-white_vCxfpINvg.svg' }]],
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/fastserve/' },
@@ -23,10 +25,11 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/gradsflow/' }
+      { icon: 'twitter', link: 'https://twitter.com/gradsflow/' },
+      { icon: 'discord', link: 'https://discord.gg/QqHX6D7d5H' },
+      { icon: 'github', link: 'https://github.com/gradsflow/' },
     ]
   },
-  head: [['link', { rel: 'icon', href: 'https://ik.imagekit.io/gradsflow/logo/v2/gf-logo-gflow-white_vCxfpINvg.svg' }]],
   sitemap: {
     hostname: 'https://gradsflow.com'
   },
@@ -34,5 +37,6 @@ export default defineConfig({
   ignoreDeadLinks: [
     // ignore all localhost links
     /^https?:\/\/localhost/,
-  ]
+  ],
+  lastUpdated: true
 })
