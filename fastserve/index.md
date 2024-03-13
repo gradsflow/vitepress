@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: "FastServe"
-  text: "Scale ML Models 🚀"
+  text: "Scale ML Models"
   tagline: "Machine Learning Serving focused on GenAI & LLMs with simplicity as the top priority."
   actions:
     - theme: alt
