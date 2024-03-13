@@ -7,7 +7,6 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: 'https://ik.imagekit.io/gradsflow/logo/v2/4_pP1S1LsQq.png',
-    head: [['link', { rel: 'icon', href: 'https://ik.imagekit.io/gradsflow/logo/v2/gf-logo-gflow-white_vCxfpINvg.svg' }]],
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Docs', link: '/fastserve/' },
@@ -19,8 +18,6 @@ export default defineConfig({
         text: 'Docs',
         items: [
           { text: 'FastServe', link: '/fastserve/' },
-          // { text: 'Markdown Examples', link: '/markdown-examples' },
-          // { text: 'Runtime API Examples', link: '/api-examples' }
         ]
       }
     ],
@@ -31,6 +28,7 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/gradsflow/' },
     ]
   },
+  head: [['link', { rel: 'icon', href: 'https://ik.imagekit.io/gradsflow/logo/v2/gf-logo-gflow-white_vCxfpINvg.svg' }]],
   sitemap: {
     hostname: 'https://gradsflow.com'
   },
