@@ -3,21 +3,22 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Gradsflow",
-  description: "Unleash the Power of AI in Your Products. Build GenAI models with Gradsflow.",
+  description: "Unleash the Power of AI in Your Products. Build GenAI enabled product with Gradsflow.",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: 'https://ik.imagekit.io/gradsflow/logo/v2/4_pP1S1LsQq.png',
     head: [['link', { rel: 'icon', href: 'https://ik.imagekit.io/gradsflow/logo/v2/gf-logo-gflow-white_vCxfpINvg.svg' }]],
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/fastserve/' },
+      { text: 'Docs', link: '/fastserve/' },
       // { text: 'Examples', link: '/markdown-examples' }
     ],
 
     sidebar: [
       {
-        text: 'Examples',
+        text: 'Docs',
         items: [
+          { text: 'FastServe', link: '/fastserve/' },
           // { text: 'Markdown Examples', link: '/markdown-examples' },
           // { text: 'Runtime API Examples', link: '/api-examples' }
         ]

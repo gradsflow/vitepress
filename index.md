@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Gradsflow"
+  #name: "Gradsflow"
   text: "Unleash the Power of AI in Your Products"
   tagline: "Helping developers build AI powered products with low-code APIs 🚀"
   actions:
