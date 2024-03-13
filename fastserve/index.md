@@ -6,15 +6,15 @@ hero:
   text: "Scale ML Models 🚀"
   tagline: "Machine Learning Serving focused on GenAI & LLMs with simplicity as the top priority."
   actions:
-    - theme: brand
-      text: Learn more
-      link: http://fastserve.gradsflow.com/
     - theme: alt
       text: Install
       link: https://github.com/gradsflow/fastserve-ai
+    - theme: brand
+      text: Learn more
+      link: http://fastserve.gradsflow.com/
 
   image:
-    src: https://ik.imagekit.io/gradsflow/logo/v2/Fastserve/2_c-Wf7LgoX.png?updatedAt=1709768078951
+    src: https://ik.imagekit.io/gradsflow/logo/v2/Fastserve/Fastserve_COhg7vM6z.png?updatedAt=1710293004534
     alt: fastserve-logo
 ---
 
